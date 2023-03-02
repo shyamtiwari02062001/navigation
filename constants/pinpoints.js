@@ -7,7 +7,7 @@ const pinPoints = [
   {
     latitude: 23.3478,
     longitude: 85.4168,
-    description: "VC SIR HOUSE",
+    description: "VC SIR RESIDENCE",
   },
   {
     latitude: 23.3474,
