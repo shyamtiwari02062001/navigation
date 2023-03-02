@@ -45,6 +45,7 @@ export default function Dashboard() {
       >
         {pinPoints.map((item, i) => (
           <Marker
+            pinColor="#9e7bb5"
             key={i}
             coordinate={{
               latitude: item.latitude,

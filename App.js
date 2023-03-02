@@ -2,9 +2,9 @@ import "react-native-gesture-handler";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { NavigationContainer } from "@react-navigation/native";
 import SettingsScreen from "./setting";
-import HomeScreen from "./home";
 import Dashboard from "./pages/dashboard";
-import { Image, TouchableOpacity } from "react-native";
+import { Image, TouchableOpacity, StyleSheet } from "react-native";
+import CustomDrawerIcon from "./components/drawer";
 const Drawer = createDrawerNavigator();
 export default function App() {
   return (
@@ -12,36 +12,18 @@ export default function App() {
       <Drawer.Navigator
         screenOptions={({ navigation }) => ({
           drawerContentContainerStyle: {
-            backgroundColor: "#4B0082",
-            height: "100%",
-            overflow: "hidden",
+            ...styles.drawerContent,
           },
-
-          drawerInactiveTintColor: "#9e7bb5",
-          drawerActiveTintColor: "#9e7bb5",
+          ...styles.extraColor,
           drawerLabelStyle: {
-            fontSize: 25,
-            fontWeight: "bold",
-            height: 30,
-            textAlignVertical: "center",
+            ...styles.drawerLabel,
           },
-          headerTintColor: "#9e7bb5",
           headerTitleStyle: {
-            fontSize: 30,
-            fontWeight: "bold",
+            ...styles.headerTitle,
           },
-          headerLeft: () => (
-            <TouchableOpacity onPress={navigation.toggleDrawer}>
-              <Image
-                style={{ tintColor: "#9e7bb5", width: 60, height: 60 }}
-                source={require("./assets/menu.png")}
-              />
-            </TouchableOpacity>
-          ),
+          headerLeft: () => <CustomDrawerIcon navigation={navigation}/>,
           headerStyle: {
-            backgroundColor: "#4B0082",
-            height: 110,
-            elevation: 50,
+            ...styles.headerStyle,
           },
         })}
         initialRouteName="Home"
@@ -52,3 +34,30 @@ export default function App() {
     </NavigationContainer>
   );
 }
+const styles = StyleSheet.create({
+  drawerContent: {
+    backgroundColor: "#4B0082",
+    height: "100%",
+    overflow: "hidden",
+  },
+  drawerLabel: {
+    fontSize: 25,
+    fontWeight: "bold",
+    height: 30,
+    textAlignVertical: "center",
+  },
+  headerTitle: {
+    fontSize: 30,
+    fontWeight: "bold",
+  },
+  headerStyle: {
+    backgroundColor: "#4B0082",
+    height: 110,
+    elevation: 50,
+  },
+  extraColor: {
+    drawerInactiveTintColor: "#9e7bb5",
+    drawerActiveTintColor: "#9e7bb5",
+    headerTintColor: "#9e7bb5",
+  },
+});
