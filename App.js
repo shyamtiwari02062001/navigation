@@ -3,8 +3,9 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import { NavigationContainer } from "@react-navigation/native";
 import SettingsScreen from "./setting";
 import Dashboard from "./pages/dashboard";
-import { Image, TouchableOpacity, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
 import CustomDrawerIcon from "./components/drawer";
+import WhereAmI from "./pages/whereAmI";
 const Drawer = createDrawerNavigator();
 export default function App() {
   return (
@@ -21,7 +22,7 @@ export default function App() {
           headerTitleStyle: {
             ...styles.headerTitle,
           },
-          headerLeft: () => <CustomDrawerIcon navigation={navigation}/>,
+          headerLeft: () => <CustomDrawerIcon navigation={navigation} />,
           headerStyle: {
             ...styles.headerStyle,
           },
@@ -29,7 +30,7 @@ export default function App() {
         initialRouteName="Home"
       >
         <Drawer.Screen name="SBU TOUR" component={Dashboard} />
-        <Drawer.Screen name="Settings" component={SettingsScreen} />
+        <Drawer.Screen name="WHERE AM I" component={WhereAmI} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
