@@ -4,6 +4,8 @@ import * as Location from "expo-location";
 import MapView, { Marker } from "react-native-maps";
 import pinPoints from "../constants/pinpoints";
 import distance from "../functions/distance";
+import Lottie from 'lottie-react-native';
+
 const WhereAmI = () => {
   const [location, setLocation] = useState(null);
   const [errorMsg, setErrorMsg] = useState(null);
@@ -47,8 +49,8 @@ const WhereAmI = () => {
     text = JSON.stringify(location);
   }
   return (
-    <View>
-      {success && (
+    <View style={{ flex: 1, backgroundColor: "#4B0082" }}>
+      {success ? (
         <MapView
           region={{
             latitude: location.coords.latitude,
@@ -87,7 +89,9 @@ const WhereAmI = () => {
               }}
             >
               <View style={styles.tooltip}>
-                <Text>{`Nearest to ${place}`}</Text>
+                <Text
+                  style={{ fontSize: 20, fontWeight: "bold", color: "#4B0082" }}
+                >{`Nearest to ${place}`}</Text>
               </View>
               <View style={styles.TriangleShapeCSS} />
               <Image
@@ -97,6 +101,8 @@ const WhereAmI = () => {
             </View>
           </Marker>
         </MapView>
+      ) : (
+        <Lottie source={require("../assets/loader.json")} autoPlay loop />
       )}
     </View>
   );
@@ -115,7 +121,7 @@ const styles = StyleSheet.create({
     height: 60,
   },
   tooltip: {
-    backgroundColor: "#fff",
+    backgroundColor: "#9e7bb5",
     justifyContent: "center",
     alignItems: "center",
     padding: 10,
@@ -129,6 +135,6 @@ const styles = StyleSheet.create({
     backgroundColor: "transparent",
     borderLeftColor: "transparent",
     borderRightColor: "transparent",
-    borderTopColor: "#fff",
+    borderTopColor: "#9e7bb5",
   },
 });

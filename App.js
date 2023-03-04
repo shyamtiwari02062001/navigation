@@ -3,9 +3,10 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import { NavigationContainer } from "@react-navigation/native";
 import SettingsScreen from "./setting";
 import Dashboard from "./pages/dashboard";
-import { StyleSheet } from "react-native";
+import { Image, StyleSheet } from "react-native";
 import CustomDrawerIcon from "./components/drawer";
 import WhereAmI from "./pages/whereAmI";
+import Path from "./pages/path";
 const Drawer = createDrawerNavigator();
 export default function App() {
   return (
@@ -29,8 +30,39 @@ export default function App() {
         })}
         initialRouteName="Home"
       >
-        <Drawer.Screen name="SBU TOUR" component={Dashboard} />
-        <Drawer.Screen name="WHERE AM I" component={WhereAmI} />
+        <Drawer.Screen
+          name="SBU TOUR"
+          options={{
+            drawerIcon: () => (
+              <Image source={require("./assets/tour.png")} style={styles.img} />
+            ),
+          }}
+          component={Dashboard}
+        />
+        <Drawer.Screen
+          name="WHERE AM I"
+          options={{
+            drawerIcon: () => (
+              <Image
+                source={require("./assets/whereAmI.png")}
+                style={styles.img}
+              />
+            ),
+          }}
+          component={WhereAmI}
+        />
+        <Drawer.Screen
+          name="FIND PATH"
+          options={{
+            drawerIcon: () => (
+              <Image
+                source={require("./assets/path.png")}
+                style={styles.img}
+              />
+            ),
+          }}
+          component={Path}
+        />
       </Drawer.Navigator>
     </NavigationContainer>
   );
@@ -60,5 +92,9 @@ const styles = StyleSheet.create({
     drawerInactiveTintColor: "#9e7bb5",
     drawerActiveTintColor: "#9e7bb5",
     headerTintColor: "#9e7bb5",
+  },
+  img: {
+    height: 40,
+    width: 40,
   },
 });
