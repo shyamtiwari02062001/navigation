@@ -4,7 +4,7 @@ import * as Location from "expo-location";
 import MapView, { Marker } from "react-native-maps";
 import pinPoints from "../constants/pinpoints";
 import distance from "../functions/distance";
-import Lottie from 'lottie-react-native';
+import Lottie from "lottie-react-native";
 
 const WhereAmI = () => {
   const [location, setLocation] = useState(null);
@@ -31,8 +31,9 @@ const WhereAmI = () => {
               pinPoints[i].longitude,
               loc.coords.latitude,
               loc.coords.longitude,
-              "N"
+              "K"
             );
+            console.log(value);
             if (value < min) {
               setMin(value);
               setPlace(pinPoints[i].description);
@@ -49,7 +50,7 @@ const WhereAmI = () => {
     text = JSON.stringify(location);
   }
   return (
-    <View style={{ flex: 1, backgroundColor: "#4B0082" }}>
+    <View style={styles.container}>
       {success ? (
         <MapView
           region={{
@@ -81,17 +82,14 @@ const WhereAmI = () => {
               longitude: location.coords.longitude,
             }}
           >
-            <View
-              style={{
-                flex: 1,
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
+            <View style={styles.marker}>
               <View style={styles.tooltip}>
-                <Text
-                  style={{ fontSize: 20, fontWeight: "bold", color: "#4B0082" }}
-                >{`Nearest to ${place}`}</Text>
+                <Text style={styles.text}>
+                  {`Nearest to ${place} \n About ${
+                    Math.round((min + Number.EPSILON) * 100) / 100
+                  } `}
+                  KM away
+                </Text>
               </View>
               <View style={styles.TriangleShapeCSS} />
               <Image
@@ -111,6 +109,7 @@ export default WhereAmI;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "#4B0082",
   },
   map: {
     width: "100%",
@@ -136,5 +135,16 @@ const styles = StyleSheet.create({
     borderLeftColor: "transparent",
     borderRightColor: "transparent",
     borderTopColor: "#9e7bb5",
+  },
+  text: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "#4B0082",
+    textAlign: "center",
+  },
+  marker: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
