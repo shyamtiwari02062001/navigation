@@ -9,9 +9,9 @@ import {
 import locations from "../constants/locations";
 import ListItem from "./listItem";
 const PlaceInput = () => {
-    console.log(locations.sort())
   const navigation = useNavigation();
-  const [value, setValue] = useState("");
+  const [data, setData] = useState(locations);
+  const [searchText, changeSearchText] = useState("");
   useEffect(() => {
     const backAction = () => {
       navigation.navigate("FIND PATH");
@@ -23,9 +23,16 @@ const PlaceInput = () => {
     );
     return () => backHandler.remove();
   }, []);
-  const update = (val) => {
-    setValue(val);
-  };
+  useEffect(() => {
+    const filtered = locations.filter((item) =>
+      item.toLowerCase().includes(searchText.toLowerCase())
+    );
+    if (searchText === "") {
+      return setData(locations);
+    }
+
+    setData(filtered);
+  }, [searchText]);
   return (
     <View style={{ flex: 1, backgroundColor: "#9e7bb5" }}>
       <View
@@ -48,7 +55,7 @@ const PlaceInput = () => {
           />
         </TouchableOpacity>
         <TextInput
-          value={value}
+          onChangeText={(val) => changeSearchText(val)}
           style={{
             width: "80%",
             padding: Dimensions.get("window").height * 0.015,
@@ -62,7 +69,7 @@ const PlaceInput = () => {
         />
       </View>
       <FlatList
-        data={locations}
+        data={data}
         renderItem={({ item, i }) => <ListItem data={item} />}
       />
     </View>
