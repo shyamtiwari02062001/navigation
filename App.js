@@ -1,12 +1,12 @@
 import "react-native-gesture-handler";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { NavigationContainer } from "@react-navigation/native";
-import SettingsScreen from "./setting";
 import Dashboard from "./pages/dashboard";
 import { Image, StyleSheet } from "react-native";
 import CustomDrawerIcon from "./components/drawer";
 import WhereAmI from "./pages/whereAmI";
 import Path from "./pages/path";
+import PlaceInput from "./components/placeInput";
 const Drawer = createDrawerNavigator();
 export default function App() {
   return (
@@ -28,7 +28,7 @@ export default function App() {
             ...styles.headerStyle,
           },
         })}
-        initialRouteName="Home"
+        initialRouteName="SBU TOUR"
       >
         <Drawer.Screen
           name="SBU TOUR"
@@ -55,13 +55,15 @@ export default function App() {
           name="FIND PATH"
           options={{
             drawerIcon: () => (
-              <Image
-                source={require("./assets/path.png")}
-                style={styles.img}
-              />
+              <Image source={require("./assets/path.png")} style={styles.img} />
             ),
           }}
           component={Path}
+        />
+        <Drawer.Screen
+          options={{ headerShown: false, drawerItemStyle: { height: 0 } }}
+          name="takePath"
+          component={PlaceInput}
         />
       </Drawer.Navigator>
     </NavigationContainer>

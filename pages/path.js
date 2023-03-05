@@ -1,9 +1,11 @@
+import { useNavigation } from "@react-navigation/native";
 import * as ScreenOrientation from "expo-screen-orientation";
 import { useEffect, useState } from "react";
 import { View, TextInput, StyleSheet, Dimensions } from "react-native";
 import MapView, { Marker } from "react-native-maps";
 import pinPoints from "../constants/pinpoints";
 const Path = () => {
+  const navigation = useNavigation();
   const [orientation, setOrientation] = useState(null);
   useEffect(() => {
     checkOrientation();
@@ -35,6 +37,7 @@ const Path = () => {
         }}
       >
         <TextInput
+          onFocus={() => navigation.navigate("takePath")}
           style={{
             width: orientation === 1 || orientation === 2 ? "90%" : "45%",
             padding: Dimensions.get("window").height * 0.015,
@@ -42,6 +45,7 @@ const Path = () => {
           }}
         />
         <TextInput
+          onFocus={() => navigation.navigate("takePath")}
           style={{
             width: orientation === 1 || orientation === 2 ? "90%" : "45%",
             padding: Dimensions.get("window").height * 0.015,

@@ -33,7 +33,6 @@ const WhereAmI = () => {
               loc.coords.longitude,
               "K"
             );
-            console.log(value);
             if (value < min) {
               setMin(value);
               setPlace(pinPoints[i].description);
