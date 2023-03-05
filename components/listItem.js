@@ -1,11 +1,25 @@
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
-const ListItem = ({ data,res }) => {
-  const navigation=useNavigation()
+const ListItem = ({ data, routingData }) => {
+  const navigation = useNavigation();
+  const change = () => {
+    if (routingData.starting) {
+      navigation.navigate("FIND PATH", {
+        ending: routingData.endingPosition,
+        starting: data,
+      });
+    }
+    else{
+      navigation.navigate("FIND PATH", {
+        ending: data,
+        starting: routingData.startingPosition,
+      });
+    }
+  };
   return (
     <TouchableOpacity
-      onPress={() => navigation.navigate('FIND PATH')}
+      onPress={() => change()}
       style={{
         backgroundColor: "#4B0082",
         marginHorizontal: 10,

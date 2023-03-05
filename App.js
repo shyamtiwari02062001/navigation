@@ -53,6 +53,7 @@ export default function App() {
         />
         <Drawer.Screen
           name="FIND PATH"
+          initialParams={{ starting: "", ending: "" }}
           options={{
             drawerIcon: () => (
               <Image source={require("./assets/path.png")} style={styles.img} />
@@ -61,6 +62,7 @@ export default function App() {
           component={Path}
         />
         <Drawer.Screen
+          initialParams={{ starting: false, ending: false }}
           options={{ headerShown: false, drawerItemStyle: { height: 0 } }}
           name="takePath"
           component={PlaceInput}

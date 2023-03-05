@@ -8,13 +8,18 @@ import {
 } from "react-native-gesture-handler";
 import locations from "../constants/locations";
 import ListItem from "./listItem";
-const PlaceInput = () => {
+const PlaceInput = ({ route }) => {
+  const routingData = route.params;
+
   const navigation = useNavigation();
   const [data, setData] = useState(locations);
   const [searchText, changeSearchText] = useState("");
   useEffect(() => {
     const backAction = () => {
-      navigation.navigate("FIND PATH");
+      navigation.navigate("FIND PATH", {
+        starting: routingData.startingPosition,
+        ending: routingData.endingPosition,
+      });
       return true;
     };
     const backHandler = BackHandler.addEventListener(
@@ -44,7 +49,14 @@ const PlaceInput = () => {
           alignItems: "center",
         }}
       >
-        <TouchableOpacity onPress={() => navigation.navigate("FIND PATH")}>
+        <TouchableOpacity
+          onPress={() =>
+            navigation.navigate("FIND PATH", {
+              starting: routingData.startingPosition,
+              ending: routingData.endingPosition,
+            })
+          }
+        >
           <Image
             style={{
               tintColor: "#4B0082",
@@ -55,6 +67,7 @@ const PlaceInput = () => {
           />
         </TouchableOpacity>
         <TextInput
+        value={searchText}
           onChangeText={(val) => changeSearchText(val)}
           style={{
             width: "80%",
@@ -70,7 +83,9 @@ const PlaceInput = () => {
       </View>
       <FlatList
         data={data}
-        renderItem={({ item, i }) => <ListItem data={item} />}
+        renderItem={({ item, i }) => (
+          <ListItem data={item} routingData={routingData} />
+        )}
       />
     </View>
   );

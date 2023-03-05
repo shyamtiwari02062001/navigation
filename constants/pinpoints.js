@@ -92,7 +92,7 @@ const pinPoints = [
   {
     latitude: 23.3538,
     longitude: 85.4137,
-    description: "PLAYGROUND",
+    description: "SBPS PLAYGROUND",
   },
   {
     latitude: 23.3551,

@@ -2,9 +2,9 @@ import { useNavigation } from "@react-navigation/native";
 import * as ScreenOrientation from "expo-screen-orientation";
 import { useEffect, useState } from "react";
 import { View, TextInput, StyleSheet, Dimensions } from "react-native";
-import MapView, { Marker } from "react-native-maps";
-import pinPoints from "../constants/pinpoints";
-const Path = () => {
+import MapView from "react-native-maps";
+const Path = ({ route }) => {
+  const routingData = route.params;
   const navigation = useNavigation();
   const [orientation, setOrientation] = useState(null);
   useEffect(() => {
@@ -37,7 +37,15 @@ const Path = () => {
         }}
       >
         <TextInput
-          onFocus={() => navigation.navigate("takePath")}
+          value={routingData.starting}
+          onFocus={() =>
+            navigation.navigate("takePath", {
+              starting: true,
+              ending: false,
+              startingPosition: routingData.starting,
+              endingPosition: routingData.ending,
+            })
+          }
           style={{
             width: orientation === 1 || orientation === 2 ? "90%" : "45%",
             padding: Dimensions.get("window").height * 0.015,
@@ -45,7 +53,15 @@ const Path = () => {
           }}
         />
         <TextInput
-          onFocus={() => navigation.navigate("takePath")}
+          value={routingData.ending}
+          onFocus={() =>
+            navigation.navigate("takePath", {
+              starting: false,
+              ending: true,
+              startingPosition: routingData.starting,
+              endingPosition: routingData.ending,
+            })
+          }
           style={{
             width: orientation === 1 || orientation === 2 ? "90%" : "45%",
             padding: Dimensions.get("window").height * 0.015,
@@ -54,7 +70,7 @@ const Path = () => {
         />
       </View>
       <MapView
-        initialRegion={{
+        region={{
           latitude: 23.3474,
           longitude: 85.417,
           latitudeDelta: 0.002,
@@ -68,20 +84,7 @@ const Path = () => {
               : Dimensions.get("window").height * 0.85,
           ...styles.map,
         }}
-      >
-        {pinPoints.map((item, i) => (
-          <Marker
-            pinColor="#9e7bb5"
-            key={i}
-            coordinate={{
-              latitude: item.latitude,
-              longitude: item.longitude,
-            }}
-            title={"SBU"}
-            description={item.description}
-          />
-        ))}
-      </MapView>
+      ></MapView>
     </View>
   );
 };
