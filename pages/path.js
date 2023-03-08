@@ -2,7 +2,8 @@ import { useNavigation } from "@react-navigation/native";
 import * as ScreenOrientation from "expo-screen-orientation";
 import { useEffect, useState } from "react";
 import { View, TextInput, StyleSheet, Dimensions } from "react-native";
-import MapView from "react-native-maps";
+import MapView, { Marker } from "react-native-maps";
+import PathMarker from "../constants/pathMarker";
 const Path = ({ route }) => {
   const routingData = route.params;
   const navigation = useNavigation();
@@ -71,8 +72,14 @@ const Path = ({ route }) => {
       </View>
       <MapView
         region={{
-          latitude: 23.3474,
-          longitude: 85.417,
+          latitude:
+            routingData.starting !== ""
+              ? PathMarker[routingData.starting].latitude
+              : 23.3474,
+          longitude:
+            routingData.starting !== ""
+              ? PathMarker[routingData.starting].longitude
+              : 85.417,
           latitudeDelta: 0.002,
           longitudeDelta: 0.002,
         }}
@@ -84,7 +91,32 @@ const Path = ({ route }) => {
               : Dimensions.get("window").height * 0.85,
           ...styles.map,
         }}
-      ></MapView>
+      >
+        {routingData.starting !== "" && (
+          <Marker
+            pinColor="#00FF00"
+            key={0}
+            coordinate={{
+              latitude: PathMarker[routingData.starting].latitude,
+              longitude: PathMarker[routingData.starting].longitude,
+            }}
+            title={"SBU"}
+            description={PathMarker[routingData.starting].description}
+          />
+        )}
+        {routingData.ending !== "" && (
+          <Marker
+            pinColor="#0000FF"
+            key={1}
+            coordinate={{
+              latitude: PathMarker[routingData.ending].latitude,
+              longitude: PathMarker[routingData.ending].longitude,
+            }}
+            title={"SBU"}
+            description={PathMarker[routingData.ending].description}
+          />
+        )}
+      </MapView>
     </View>
   );
 };
