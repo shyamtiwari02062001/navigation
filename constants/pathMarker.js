@@ -1,6 +1,6 @@
 const PathMarker = {
   AUDITORIUM: {
-    latitude: 23.3532,
+    latitude: 23.35342,
     longitude: 85.41325,
     description: "AUDITORIUM",
   },
@@ -64,7 +64,7 @@ const PathMarker = {
     longitude: 85.4138,
     description: "PLAYGROUND",
   },
-  " unknown": {
+  "YOGA & NATUROPATHY": {
     latitude: 23.3503,
     longitude: 85.414,
     description: "unknown",
@@ -75,7 +75,7 @@ const PathMarker = {
     description: "WORKSHOP",
   },
   IC: {
-    latitude: 23.35019,
+    latitude: 23.35016,
     longitude: 85.4133,
     description: "IC",
   },
@@ -85,7 +85,7 @@ const PathMarker = {
     description: "POND",
   },
   AUDITORIUM: {
-    latitude: 23.3532,
+    latitude: 23.35342,
     longitude: 85.41325,
     description: "AUDITORIUM",
   },
@@ -95,8 +95,8 @@ const PathMarker = {
     description: "BASKETBALL COURT",
   },
   "SBPS PLAYGROUND": {
-    latitude: 23.3538,
-    longitude: 85.4137,
+    latitude: 23.35394,
+    longitude: 85.4135,
     description: "SBPS PLAYGROUND",
   },
   "SARALA BIRLA PUBLIC SCHOOL": {
@@ -120,8 +120,8 @@ const PathMarker = {
     description: "GATE NO 1",
   },
   "GATE NO 7": {
-    latitude: 23.35011,
-    longitude: 85.41325,
+    latitude: 23.3501,
+    longitude: 85.4132,
     description: "GATE NO 7",
   },
   "GATE NO 5": {

@@ -7,6 +7,7 @@ import CustomDrawerIcon from "./components/drawer";
 import WhereAmI from "./pages/whereAmI";
 import Path from "./pages/path";
 import PlaceInput from "./components/placeInput";
+import Testing from "./pages/testing";
 const Drawer = createDrawerNavigator();
 export default function App() {
   return (
@@ -66,6 +67,10 @@ export default function App() {
           options={{ headerShown: false, drawerItemStyle: { height: 0 } }}
           name="takePath"
           component={PlaceInput}
+        />
+        <Drawer.Screen
+          name="testing"
+          component={Testing}
         />
       </Drawer.Navigator>
     </NavigationContainer>

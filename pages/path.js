@@ -2,12 +2,36 @@ import { useNavigation } from "@react-navigation/native";
 import * as ScreenOrientation from "expo-screen-orientation";
 import { useEffect, useState } from "react";
 import { View, TextInput, StyleSheet, Dimensions } from "react-native";
-import MapView, { Marker } from "react-native-maps";
+import MapView, { Marker, Polyline } from "react-native-maps";
 import PathMarker from "../constants/pathMarker";
+import academicBuilding from "../functions/acdemicBuilding";
+import administrativeBuilding from "../functions/administrativeBuilding";
+import adminsitrativeGround from "../functions/administrativeGround";
+import auditorium from "../functions/auditorium";
+import basketBall from "../functions/basketball";
+import canteen from "../functions/canteen";
+import dieMensa from "../functions/dieMensa";
+import gate1 from "../functions/gate1";
+import gate4 from "../functions/gate4";
+import gate5 from "../functions/gate5";
+import gate7 from "../functions/gate7";
+import hostel from "../functions/hostel";
+import ic from "../functions/ic";
+import mess from "../functions/mess";
+import newParking from "../functions/newParking";
+import nursing from "../functions/nursing";
+import oldParking from "../functions/oldParking";
+import playground from "../functions/playground";
+import pond from "../functions/pond";
+import residence from "../functions/residence";
+import sbpsPlayground from "../functions/sbpsPlayground";
+import workshop from "../functions/workshop";
+import yoga from "../functions/yoga";
 const Path = ({ route }) => {
   const routingData = route.params;
   const navigation = useNavigation();
   const [orientation, setOrientation] = useState(null);
+  const [paths, setPaths] = useState([]);
   useEffect(() => {
     checkOrientation();
     const subscription = ScreenOrientation.addOrientationChangeListener(
@@ -24,6 +48,57 @@ const Path = ({ route }) => {
   const handleOrientationChange = (o) => {
     setOrientation(o.orientationInfo.orientation);
   };
+  useEffect(() => {
+    if (routingData.starting !== "" && routingData.ending !== "") {
+      if (routingData.starting === "ACADEMIC BUILDING") {
+        setPaths(academicBuilding(routingData.ending));
+      } else if (routingData.starting === "ADMINISTRATIVE BUILDING") {
+        setPaths(administrativeBuilding(routingData.ending));
+      } else if (routingData.starting === "ADMINISTRATIVE GROUND") {
+        setPaths(adminsitrativeGround(routingData.ending));
+      } else if (routingData.starting === "AUDITORIUM") {
+        setPaths(auditorium(routingData.ending));
+      } else if (routingData.starting === "BASKETBALL COURT") {
+        setPaths(basketBall(routingData.ending));
+      } else if (routingData.starting === "DIE MENSA") {
+        setPaths(dieMensa(routingData.ending));
+      } else if (routingData.starting === "GATE NO 1") {
+        setPaths(gate1(routingData.ending));
+      } else if (routingData.starting === "GATE NO 4") {
+        setPaths(gate4(routingData.ending));
+      } else if (routingData.starting === "GATE NO 5") {
+        setPaths(gate5(routingData.ending));
+      } else if (routingData.starting === "GATE NO 7") {
+        setPaths(gate7(routingData.ending));
+      } else if (routingData.starting === "GIRLS HOSTEL") {
+        setPaths(hostel(routingData.ending));
+      } else if (routingData.starting === "IC") {
+        setPaths(ic(routingData.ending));
+      } else if (routingData.starting === "MESS") {
+        setPaths(mess(routingData.ending));
+      } else if (routingData.starting === "NEW CANTEEN") {
+        setPaths(canteen(routingData.ending));
+      } else if (routingData.starting === "NEW PARKING") {
+        setPaths(newParking(routingData.ending));
+      } else if (routingData.starting === "NURSING BLOCK") {
+        setPaths(nursing(routingData.ending));
+      } else if (routingData.starting === "OLD PARKING") {
+        setPaths(oldParking(routingData.ending));
+      } else if (routingData.starting === "PLAYGROUND") {
+        setPaths(playground(routingData.ending));
+      } else if (routingData.starting === "POND") {
+        setPaths(pond(routingData.ending));
+      } else if (routingData.starting === "SBPS PLAYGROUND") {
+        setPaths(sbpsPlayground(routingData.ending));
+      } else if (routingData.starting === "VC SIR RESIDENCE") {
+        setPaths(residence(routingData.ending));
+      } else if (routingData.starting === "WORKSHOP") {
+        setPaths(workshop(routingData.ending));
+      } else if (routingData.starting === "YOGA & NATUROPATHY") {
+        setPaths(yoga(routingData.ending));
+      }
+    }
+  }, [routingData.starting, routingData.ending]);
   return (
     <View>
       <View
@@ -104,6 +179,7 @@ const Path = ({ route }) => {
             description={PathMarker[routingData.starting].description}
           />
         )}
+        <Polyline strokeColor="#4B0082" coordinates={paths} strokeWidth={6} />
         {routingData.ending !== "" && (
           <Marker
             pinColor="#0000FF"
