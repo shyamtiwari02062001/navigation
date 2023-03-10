@@ -141,6 +141,13 @@ export default function nursing(ending) {
       { latitude: 23.3498, longitude: 85.41418 },
       { latitude: 23.34983, longitude: 85.4144 },
     ];
+  } else if (ending === "OLD PARKING") {
+    return [
+      { latitude: 23.34983, longitude: 85.4144 },
+      { latitude: 23.34994, longitude: 85.41463 },
+      { latitude: 23.34936, longitude: 85.41495 },
+      { latitude: 23.34934, longitude: 85.4149 },
+    ];
   } else {
     return [];
   }

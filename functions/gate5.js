@@ -93,7 +93,7 @@ export default function gate5(ending) {
       { latitude: 23.34978, longitude: 85.41426 },
       { latitude: 23.3498, longitude: 85.41438 },
     ];
-  }else if (ending === "PLAYGROUND") {
+  } else if (ending === "PLAYGROUND") {
     return [
       { latitude: 23.35443, longitude: 85.41296 },
       { latitude: 23.35443, longitude: 85.41305 },
@@ -108,7 +108,20 @@ export default function gate5(ending) {
       { latitude: 23.34978, longitude: 85.41426 },
       { latitude: 23.3498, longitude: 85.41418 },
     ];
-  }  else {
+  } else if (ending === "OLD PARKING") {
+    return [
+      { latitude: 23.35443, longitude: 85.41296 },
+      { latitude: 23.35443, longitude: 85.41305 },
+      { latitude: 23.353, longitude: 85.41302 },
+      { latitude: 23.3503, longitude: 85.413 },
+      { latitude: 23.3501, longitude: 85.4131 },
+      { latitude: 23.3501, longitude: 85.4133 },
+      { latitude: 23.3502, longitude: 85.41446 },
+      { latitude: 23.34994, longitude: 85.41463 },
+      { latitude: 23.34936, longitude: 85.41495 },
+      { latitude: 23.34934, longitude: 85.4149 },
+    ];
+  } else {
     return [];
   }
 }

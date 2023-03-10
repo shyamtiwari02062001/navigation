@@ -104,6 +104,15 @@ export default function gate7(ending) {
       { latitude: 23.34978, longitude: 85.41426 },
       { latitude: 23.3498, longitude: 85.41418 },
     ];
+  } else if (ending === "OLD PARKING") {
+    return [
+      { latitude: 23.35013, longitude: 85.4133 },
+      { latitude: 23.3501, longitude: 85.4133 },
+      { latitude: 23.3502, longitude: 85.41446 },
+      { latitude: 23.34994, longitude: 85.41463 },
+      { latitude: 23.34936, longitude: 85.41495 },
+      { latitude: 23.34934, longitude: 85.4149 },
+    ];
   } else {
     return [];
   }

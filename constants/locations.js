@@ -15,7 +15,7 @@ const locations = [
   // "NEW CANTEEN",
   // "NEW PARKING",
   "NURSING BLOCK",
-  // "OLD PARKING",
+  "OLD PARKING",
   "PLAYGROUND",
   // "POND",
   "SBPS PLAYGROUND",
