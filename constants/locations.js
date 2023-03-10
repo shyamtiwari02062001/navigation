@@ -4,7 +4,7 @@ const locations = [
   // "ADMINISTRATIVE GROUND",
   "AUDITORIUM",
   "BASKETBALL COURT",
-  // "DIE MENSA",
+  "DIE MENSA",
   "GATE NO 1",
   "GATE NO 4",
   "GATE NO 5",
