@@ -115,6 +115,16 @@ export default function yoga(ending) {
       { latitude: 23.34994, longitude: 85.41463 },
       { latitude: 23.34983, longitude: 85.4144 },
     ];
+  } else if (ending === "PLAYGROUND") {
+    return [
+      { latitude: 23.3503, longitude: 85.4142 },
+      { latitude: 23.3503, longitude: 85.4142 },
+      { latitude: 23.3503, longitude: 85.4144 },
+      { latitude: 23.3501, longitude: 85.4145 },
+      { latitude: 23.3501, longitude: 85.4143 },
+      { latitude: 23.3498, longitude: 85.41426 },
+      { latitude: 23.3498, longitude: 85.41418 },
+    ];
   } else {
     return [];
   }

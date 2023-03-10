@@ -136,6 +136,11 @@ export default function nursing(ending) {
       { latitude: 23.34978, longitude: 85.41426 },
       { latitude: 23.3498, longitude: 85.41438 },
     ];
+  } else if (ending === "PLAYGROUND") {
+    return [
+      { latitude: 23.3498, longitude: 85.41418 },
+      { latitude: 23.34983, longitude: 85.4144 },
+    ];
   } else {
     return [];
   }

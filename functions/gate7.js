@@ -94,6 +94,16 @@ export default function gate7(ending) {
       { latitude: 23.34978, longitude: 85.41426 },
       { latitude: 23.3498, longitude: 85.41438 },
     ];
+  } else if (ending === "PLAYGROUND") {
+    return [
+      { latitude: 23.3501, longitude: 85.4132 },
+      { latitude: 23.3501, longitude: 85.4133 },
+      { latitude: 23.3501, longitude: 85.4133 },
+      { latitude: 23.3501, longitude: 85.41356 },
+      { latitude: 23.35015, longitude: 85.41426 },
+      { latitude: 23.34978, longitude: 85.41426 },
+      { latitude: 23.3498, longitude: 85.41418 },
+    ];
   } else {
     return [];
   }

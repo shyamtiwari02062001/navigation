@@ -91,6 +91,21 @@ export default function gate4(ending) {
       { latitude: 23.34978, longitude: 85.41426 },
       { latitude: 23.3498, longitude: 85.41438 },
     ];
+  }  else if (ending === "PLAYGROUND") {
+    return [
+      { latitude: 23.35443, longitude: 85.4131 },
+      { latitude: 23.35443, longitude: 85.41305 },
+      { latitude: 23.353, longitude: 85.41302 },
+      { latitude: 23.3503, longitude: 85.413 },
+      { latitude: 23.3501, longitude: 85.4131 },
+      { latitude: 23.3501, longitude: 85.4132 },
+      { latitude: 23.3501, longitude: 85.4133 },
+      { latitude: 23.3501, longitude: 85.4133 },
+      { latitude: 23.3501, longitude: 85.41356 },
+      { latitude: 23.35015, longitude: 85.41426 },
+      { latitude: 23.34978, longitude: 85.41426 },
+      { latitude: 23.3498, longitude: 85.41418 },
+    ];
   } else {
     return [];
   }
