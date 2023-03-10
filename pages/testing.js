@@ -28,21 +28,14 @@ export default function Testing() {
         <Marker
           pinColor="#9e7bb5"
           key={1}
-          coordinate={{ latitude: 23.35443, longitude: 85.41305 }}
+          coordinate={{ latitude: 23.34885, longitude: 85.41419 }}
           title={"SBU"}
           description={"description"}
         />
         <Polyline
           coordinates={[
-            { latitude: 23.35342, longitude: 85.41325 },
-            { latitude: 23.35397, longitude: 85.41335 },
-            { latitude: 23.35398, longitude: 85.41332 },
-            { latitude: 23.3544, longitude: 85.41326 },
-            { latitude: 23.35443, longitude: 85.4131 },
-            { latitude: 23.35443, longitude: 85.41305 },
-            { latitude: 23.353, longitude: 85.41302 },
-            { latitude: 23.3503, longitude: 85.413 },
-            { latitude: 23.3501, longitude: 85.4131 },
+            { latitude: 23.35013, longitude: 85.4133 },
+            { latitude: 23.3501, longitude: 85.4133 },
             { latitude: 23.3502, longitude: 85.41446 },
             { latitude: 23.34994, longitude: 85.41463 },
             { latitude: 23.34936, longitude: 85.41495 },
