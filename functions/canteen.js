@@ -168,6 +168,12 @@ export default function canteen(ending) {
       { latitude: 23.34867, longitude: 85.41394 },
       { latitude: 23.34863, longitude: 85.41394 },
     ];
+  } else if (ending === "MESS") {
+    return [
+      { latitude: 23.34863, longitude: 85.41394 },
+      { latitude: 23.34867, longitude: 85.4139 },
+      { latitude: 23.34872, longitude: 85.41387 },
+    ];
   } else {
     return [];
   }

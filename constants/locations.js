@@ -11,7 +11,7 @@ const locations = [
   "GATE NO 7",
   // "GIRLS HOSTEL",
   "IC",
-  // "MESS",
+  "MESS",
   "NEW CANTEEN",
   // "NEW PARKING",
   "NURSING BLOCK",
