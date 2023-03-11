@@ -141,7 +141,7 @@ export default function oldParking(ending) {
       { latitude: 23.34936, longitude: 85.41495 },
       { latitude: 23.34934, longitude: 85.4149 },
     ];
-  }  else if (ending === "DIE MENSA") {
+  } else if (ending === "DIE MENSA") {
     return [
       { latitude: 23.34934, longitude: 85.4149 },
       { latitude: 23.34936, longitude: 85.41495 },
@@ -150,7 +150,16 @@ export default function oldParking(ending) {
       { latitude: 23.34885, longitude: 85.41419 },
       { latitude: 23.34885, longitude: 85.41417 },
     ];
-  }  else {
+  } else if (ending === "NEW CANTEEN") {
+    return [
+      { latitude: 23.34934, longitude: 85.4149 },
+      { latitude: 23.34936, longitude: 85.41495 },
+      { latitude: 23.3493, longitude: 85.415 },
+      { latitude: 23.3487, longitude: 85.4142 },
+      { latitude: 23.34867, longitude: 85.41394 },
+      { latitude: 23.34863, longitude: 85.41394 },
+    ];
+  } else {
     return [];
   }
 }

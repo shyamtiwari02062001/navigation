@@ -136,6 +136,20 @@ export default function gate1(ending) {
       { latitude: 23.34885, longitude: 85.41419 },
       { latitude: 23.34885, longitude: 85.41417 },
     ];
+  } else if (ending === "NEW CANTEEN") {
+    return [
+      { latitude: 23.35577, longitude: 85.41309 },
+      { latitude: 23.35443, longitude: 85.41305 },
+      { latitude: 23.353, longitude: 85.41302 },
+      { latitude: 23.3503, longitude: 85.413 },
+      { latitude: 23.3501, longitude: 85.4131 },
+      { latitude: 23.3501, longitude: 85.4132 },
+      { latitude: 23.35015, longitude: 85.41429 },
+      { latitude: 23.34885, longitude: 85.41419 },
+      { latitude: 23.3487, longitude: 85.4142 },
+      { latitude: 23.34867, longitude: 85.41394 },
+      { latitude: 23.34863, longitude: 85.41394 },
+    ];
   } else {
     return [];
   }

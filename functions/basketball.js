@@ -133,7 +133,7 @@ export default function basketBall(ending) {
       { latitude: 23.34978, longitude: 85.41426 },
       { latitude: 23.3498, longitude: 85.41418 },
     ];
-  }else if (ending === "OLD PARKING") {
+  } else if (ending === "OLD PARKING") {
     return [
       { latitude: 23.35455, longitude: 85.41329 },
       { latitude: 23.35455, longitude: 85.41325 },
@@ -166,7 +166,24 @@ export default function basketBall(ending) {
       { latitude: 23.34885, longitude: 85.41419 },
       { latitude: 23.34885, longitude: 85.41417 },
     ];
-  }  else {
+  } else if (ending === "NEW CANTEEN") {
+    return [
+      { latitude: 23.35455, longitude: 85.41329 },
+      { latitude: 23.35455, longitude: 85.41325 },
+      { latitude: 23.3544, longitude: 85.41326 },
+      { latitude: 23.35443, longitude: 85.4131 },
+      { latitude: 23.35443, longitude: 85.4131 },
+      { latitude: 23.35443, longitude: 85.41305 },
+      { latitude: 23.353, longitude: 85.41302 },
+      { latitude: 23.3503, longitude: 85.413 },
+      { latitude: 23.3501, longitude: 85.4131 },
+      { latitude: 23.35015, longitude: 85.41429 },
+      { latitude: 23.34885, longitude: 85.41419 },
+      { latitude: 23.3487, longitude: 85.4142 },
+      { latitude: 23.34867, longitude: 85.41394 },
+      { latitude: 23.34863, longitude: 85.41394 },
+    ];
+  } else {
     return [];
   }
 }

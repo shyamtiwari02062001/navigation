@@ -148,12 +148,21 @@ export default function nursing(ending) {
       { latitude: 23.34936, longitude: 85.41495 },
       { latitude: 23.34934, longitude: 85.4149 },
     ];
-  }  else if (ending === "DIE MENSA") {
+  } else if (ending === "DIE MENSA") {
     return [
       { latitude: 23.3498, longitude: 85.41438 },
       { latitude: 23.3498, longitude: 85.41429 },
       { latitude: 23.34885, longitude: 85.41419 },
       { latitude: 23.34885, longitude: 85.41417 },
+    ];
+  } else if (ending === "NEW CANTEEN") {
+    return [
+      { latitude: 23.3498, longitude: 85.41438 },
+      { latitude: 23.3498, longitude: 85.41429 },
+      { latitude: 23.34885, longitude: 85.41419 },
+      { latitude: 23.3487, longitude: 85.4142 },
+      { latitude: 23.34867, longitude: 85.41394 },
+      { latitude: 23.34863, longitude: 85.41394 },
     ];
   } else {
     return [];

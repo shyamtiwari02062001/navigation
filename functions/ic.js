@@ -130,6 +130,17 @@ export default function ic(ending) {
       { latitude: 23.34885, longitude: 85.41419 },
       { latitude: 23.34885, longitude: 85.41417 },
     ];
+  } else if (ending === "WORKSHOP") {
+    return [
+      { latitude: 23.35013, longitude: 85.4133 },
+      { latitude: 23.3501, longitude: 85.4133 },
+      { latitude: 23.3501, longitude: 85.41356 },
+      { latitude: 23.35015, longitude: 85.41429 },
+      { latitude: 23.34885, longitude: 85.41419 },
+      { latitude: 23.3487, longitude: 85.4142 },
+      { latitude: 23.34867, longitude: 85.41394 },
+      { latitude: 23.34863, longitude: 85.41394 },
+    ];
   } else {
     return [];
   }

@@ -12,7 +12,7 @@ const locations = [
   // "GIRLS HOSTEL",
   "IC",
   // "MESS",
-  // "NEW CANTEEN",
+  "NEW CANTEEN",
   // "NEW PARKING",
   "NURSING BLOCK",
   "OLD PARKING",

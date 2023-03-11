@@ -142,6 +142,17 @@ export default function yoga(ending) {
       { latitude: 23.34885, longitude: 85.41419 },
       { latitude: 23.34885, longitude: 85.41417 },
     ];
+  } else if (ending === "NEW CANTEEN") {
+    return [
+      { latitude: 23.3503, longitude: 85.4142 },
+      { latitude: 23.35029, longitude: 85.4144 },
+      { latitude: 23.35021, longitude: 85.41444 },
+      { latitude: 23.35015, longitude: 85.41429 },
+      { latitude: 23.34885, longitude: 85.41419 },
+      { latitude: 23.3487, longitude: 85.4142 },
+      { latitude: 23.34867, longitude: 85.41394 },
+      { latitude: 23.34863, longitude: 85.41394 },
+    ];
   } else {
     return [];
   }

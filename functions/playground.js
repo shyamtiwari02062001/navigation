@@ -160,6 +160,15 @@ export default function playground(ending) {
       { latitude: 23.34885, longitude: 85.41419 },
       { latitude: 23.34885, longitude: 85.41417 },
     ];
+  } else if (ending === "NEW CANTEEN") {
+    return [
+      { latitude: 23.3498, longitude: 85.41418 },
+      { latitude: 23.3498, longitude: 85.41429 },
+      { latitude: 23.34885, longitude: 85.41419 },
+      { latitude: 23.3487, longitude: 85.4142 },
+      { latitude: 23.34867, longitude: 85.41394 },
+      { latitude: 23.34863, longitude: 85.41394 },
+    ];
   } else {
     return [];
   }
