@@ -223,6 +223,28 @@ export default function auditorium(ending) {
       { latitude: 23.34854, longitude: 85.4147 },
       { latitude: 23.3485, longitude: 85.4147 },
     ];
+  } else if (ending === "NEW PARKING") {
+    return [
+      { latitude: 23.35342, longitude: 85.41325 },
+      { latitude: 23.35397, longitude: 85.41335 },
+      { latitude: 23.35398, longitude: 85.41332 },
+      { latitude: 23.3544, longitude: 85.41326 },
+      { latitude: 23.35443, longitude: 85.4131 },
+      { latitude: 23.35443, longitude: 85.41305 },
+      { latitude: 23.353, longitude: 85.41302 },
+      { latitude: 23.3503, longitude: 85.413 },
+      { latitude: 23.3501, longitude: 85.4131 },
+      { latitude: 23.3501, longitude: 85.4132 },
+      { latitude: 23.35018, longitude: 85.41442 },
+      { latitude: 23.34994, longitude: 85.41463 },
+      { latitude: 23.34936, longitude: 85.41495 },
+      { latitude: 23.3493, longitude: 85.415 },
+      { latitude: 23.3485, longitude: 85.41565 },
+      { latitude: 23.348, longitude: 85.41595 },
+      { latitude: 23.34767, longitude: 85.416 },
+      { latitude: 23.3477, longitude: 85.4155 },
+      { latitude: 23.3476, longitude: 85.4155 },
+    ];
   } else {
     return [];
   }

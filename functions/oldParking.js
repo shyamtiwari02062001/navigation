@@ -178,6 +178,17 @@ export default function oldParking(ending) {
       { latitude: 23.34854, longitude: 85.4147 },
       { latitude: 23.3485, longitude: 85.4147 },
     ];
+  } else if (ending === "NEW PARKING") {
+    return [
+      { latitude: 23.34934, longitude: 85.4149 },
+      { latitude: 23.34936, longitude: 85.41495 },
+      { latitude: 23.3493, longitude: 85.415 },
+      { latitude: 23.3485, longitude: 85.41565 },
+      { latitude: 23.348, longitude: 85.41595 },
+      { latitude: 23.34767, longitude: 85.416 },
+      { latitude: 23.3477, longitude: 85.4155 },
+      { latitude: 23.3476, longitude: 85.4155 },
+    ];
   } else {
     return [];
   }

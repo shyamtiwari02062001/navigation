@@ -194,6 +194,15 @@ export default function hostel(ending) {
       { latitude: 23.34854, longitude: 85.4147 },
       { latitude: 23.3485, longitude: 85.4147 },
     ];
+  } else if (ending === "NEW PARKING") {
+    return [
+      { latitude: 23.34854, longitude: 85.4147 },
+      { latitude: 23.34854, longitude: 85.41462 },
+      { latitude: 23.348, longitude: 85.41462 },
+      { latitude: 23.3478, longitude: 85.41483 },
+      { latitude: 23.3477, longitude: 85.4155 },
+      { latitude: 23.3476, longitude: 85.4155 },
+    ];
   } else {
     return [];
   }

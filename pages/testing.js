@@ -28,16 +28,13 @@ export default function Testing() {
         <Marker
           pinColor="#9e7bb5"
           key={1}
-          coordinate={{
-            latitude: 23.34862,
-            longitude: 85.4142,
-          }}
+          coordinate={{ latitude: 23.348, longitude: 85.41595 }}
           title={"SBU"}
           description={"description"}
         />
         <Polyline
           coordinates={[
-            { latitude: 23.35342, longitude: 85.41325 },
+            { latitude: 23.35394, longitude: 85.4135 },
             { latitude: 23.35397, longitude: 85.41335 },
             { latitude: 23.35398, longitude: 85.41332 },
             { latitude: 23.3544, longitude: 85.41326 },
@@ -47,12 +44,16 @@ export default function Testing() {
             { latitude: 23.3503, longitude: 85.413 },
             { latitude: 23.3501, longitude: 85.4131 },
             { latitude: 23.3501, longitude: 85.4132 },
-            { latitude: 23.35015, longitude: 85.41429 },
-            { latitude: 23.34885, longitude: 85.41419 },
-
-            { latitude: 23.34862, longitude: 85.41422 },
-            { latitude: 23.34854, longitude: 85.4147 },
-            { latitude: 23.3485, longitude: 85.4147 },
+            { latitude: 23.35018, longitude: 85.41442 },
+            { latitude: 23.34994, longitude: 85.41463 },
+            { latitude: 23.34994, longitude: 85.41463 },
+            { latitude: 23.34936, longitude: 85.41495 },
+            { latitude: 23.3493, longitude: 85.415 },
+            { latitude: 23.3485, longitude: 85.41565 },
+            { latitude: 23.348, longitude: 85.41595 },
+            { latitude: 23.34767, longitude: 85.416 },
+            { latitude: 23.3477, longitude: 85.4155 },
+            { latitude: 23.3476, longitude: 85.4155 },
           ]}
           strokeColor="red" // fallback for when `strokeColors` is not supported by the map-provider
           strokeColors={[

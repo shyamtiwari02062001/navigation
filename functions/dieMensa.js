@@ -164,6 +164,18 @@ export default function dieMensa(ending) {
       { latitude: 23.34885, longitude: 85.41419 },
       { latitude: 23.34885, longitude: 85.41417 },
     ];
+  } else if (ending === "NEW PARKING") {
+    return [
+      { latitude: 23.34885, longitude: 85.41417 },
+      { latitude: 23.34885, longitude: 85.41419 },
+      { latitude: 23.34869, longitude: 85.41422 },
+      { latitude: 23.34862, longitude: 85.41422 },
+      { latitude: 23.34854, longitude: 85.41462 },
+      { latitude: 23.348, longitude: 85.41462 },
+      { latitude: 23.3478, longitude: 85.41483 },
+      { latitude: 23.3477, longitude: 85.4155 },
+      { latitude: 23.3476, longitude: 85.4155 },
+    ];
   } else {
     return [];
   }
