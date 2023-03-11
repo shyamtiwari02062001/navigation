@@ -138,6 +138,17 @@ export default function gate7(ending) {
       { latitude: 23.34867, longitude: 85.4139 },
       { latitude: 23.34872, longitude: 85.41387 },
     ];
+  } else if (ending === "GIRLS HOSTEL") {
+    return [
+      { latitude: 23.35013, longitude: 85.4133 },
+      { latitude: 23.3501, longitude: 85.4133 },
+      { latitude: 23.3501, longitude: 85.41356 },
+      { latitude: 23.35015, longitude: 85.41429 },
+      { latitude: 23.34885, longitude: 85.41419 },
+      { latitude: 23.34862, longitude: 85.41422 },
+      { latitude: 23.34854, longitude: 85.4147 },
+      { latitude: 23.3485, longitude: 85.4147 },
+    ];
   } else {
     return [];
   }

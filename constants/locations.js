@@ -9,7 +9,7 @@ const locations = [
   "GATE NO 4",
   "GATE NO 5",
   "GATE NO 7",
-  // "GIRLS HOSTEL",
+  "GIRLS HOSTEL",
   "IC",
   "MESS",
   "NEW CANTEEN",

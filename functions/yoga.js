@@ -153,7 +153,7 @@ export default function yoga(ending) {
       { latitude: 23.34867, longitude: 85.41394 },
       { latitude: 23.34863, longitude: 85.41394 },
     ];
-  }else if (ending === "MESS") {
+  } else if (ending === "MESS") {
     return [
       { latitude: 23.3503, longitude: 85.4142 },
       { latitude: 23.35029, longitude: 85.4144 },
@@ -163,6 +163,17 @@ export default function yoga(ending) {
       { latitude: 23.3487, longitude: 85.4142 },
       { latitude: 23.34867, longitude: 85.4139 },
       { latitude: 23.34872, longitude: 85.41387 },
+    ];
+  } else if (ending === "GIRLS HOSTEL") {
+    return [
+      { latitude: 23.3503, longitude: 85.4142 },
+      { latitude: 23.35029, longitude: 85.4144 },
+      { latitude: 23.35021, longitude: 85.41444 },
+      { latitude: 23.35015, longitude: 85.41429 },
+      { latitude: 23.34885, longitude: 85.41419 },
+      { latitude: 23.34862, longitude: 85.41422 },
+      { latitude: 23.34854, longitude: 85.4147 },
+      { latitude: 23.3485, longitude: 85.4147 },
     ];
   } else {
     return [];

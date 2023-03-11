@@ -161,6 +161,20 @@ export default function gate5(ending) {
       { latitude: 23.34867, longitude: 85.4139 },
       { latitude: 23.34872, longitude: 85.41387 },
     ];
+  } else if (ending === "GIRLS HOSTEL") {
+    return [
+      { latitude: 23.35443, longitude: 85.41296 },
+      { latitude: 23.35443, longitude: 85.41305 },
+      { latitude: 23.353, longitude: 85.41302 },
+      { latitude: 23.3503, longitude: 85.413 },
+      { latitude: 23.3501, longitude: 85.4131 },
+      { latitude: 23.3501, longitude: 85.4132 },
+      { latitude: 23.35015, longitude: 85.41429 },
+      { latitude: 23.34885, longitude: 85.41419 },
+      { latitude: 23.34862, longitude: 85.41422 },
+      { latitude: 23.34854, longitude: 85.4147 },
+      { latitude: 23.3485, longitude: 85.4147 },
+    ];
   } else {
     return [];
   }

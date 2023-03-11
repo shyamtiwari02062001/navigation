@@ -173,6 +173,15 @@ export default function nursing(ending) {
       { latitude: 23.34867, longitude: 85.4139 },
       { latitude: 23.34872, longitude: 85.41387 },
     ];
+  } else if (ending === "GIRLS HOSTEL") {
+    return [
+      { latitude: 23.3498, longitude: 85.41438 },
+      { latitude: 23.3498, longitude: 85.41429 },
+      { latitude: 23.34885, longitude: 85.41419 },
+      { latitude: 23.34862, longitude: 85.41422 },
+      { latitude: 23.34854, longitude: 85.4147 },
+      { latitude: 23.3485, longitude: 85.4147 },
+    ];
   } else {
     return [];
   }
