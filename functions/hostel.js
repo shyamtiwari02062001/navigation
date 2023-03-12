@@ -203,6 +203,24 @@ export default function hostel(ending) {
       { latitude: 23.3477, longitude: 85.4155 },
       { latitude: 23.3476, longitude: 85.4155 },
     ];
+  } else if (ending === "ACADEMIC BUILDING") {
+    return [
+      { latitude: 23.34854, longitude: 85.4147 },
+      { latitude: 23.34854, longitude: 85.41462 },
+      { latitude: 23.348, longitude: 85.41462 },
+      { latitude: 23.3478, longitude: 85.41483 },
+      { latitude: 23.34768, longitude: 85.416 },
+      { latitude: 23.3472, longitude: 85.41605 },
+      { latitude: 23.347, longitude: 85.41612 },
+      { latitude: 23.34685, longitude: 85.41622 },
+      { latitude: 23.3467, longitude: 85.41636 },
+      { latitude: 23.3467, longitude: 85.41643 },
+      { latitude: 23.34706, longitude: 85.41676 },
+      { latitude: 23.3471, longitude: 85.4167 },
+      { latitude: 23.34714, longitude: 85.4167 },
+      { latitude: 23.34723, longitude: 85.41665 },
+      { latitude: 23.347201, longitude: 85.4166 },
+    ];
   } else {
     return [];
   }

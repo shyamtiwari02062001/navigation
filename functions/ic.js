@@ -179,6 +179,30 @@ export default function ic(ending) {
       { latitude: 23.3477, longitude: 85.4155 },
       { latitude: 23.3476, longitude: 85.4155 },
     ];
+  } else if (ending === "ACADEMIC BUILDING") {
+    return [
+      { latitude: 23.35013, longitude: 85.4133 },
+      { latitude: 23.3501, longitude: 85.4133 },
+      { latitude: 23.3501, longitude: 85.41356 },
+      { latitude: 23.3501, longitude: 85.41356 },
+      { latitude: 23.35018, longitude: 85.41442 },
+      { latitude: 23.34994, longitude: 85.41463 },
+      { latitude: 23.34936, longitude: 85.41495 },
+      { latitude: 23.3493, longitude: 85.415 },
+      { latitude: 23.3485, longitude: 85.41565 },
+      { latitude: 23.348, longitude: 85.41595 },
+      { latitude: 23.34768, longitude: 85.416 },
+      { latitude: 23.3472, longitude: 85.41605 },
+      { latitude: 23.347, longitude: 85.41612 },
+      { latitude: 23.34685, longitude: 85.41622 },
+      { latitude: 23.3467, longitude: 85.41636 },
+      { latitude: 23.3467, longitude: 85.41643 },
+      { latitude: 23.34706, longitude: 85.41676 },
+      { latitude: 23.3471, longitude: 85.4167 },
+      { latitude: 23.34714, longitude: 85.4167 },
+      { latitude: 23.34723, longitude: 85.41665 },
+      { latitude: 23.347201, longitude: 85.4166 },
+    ];
   } else {
     return [];
   }
