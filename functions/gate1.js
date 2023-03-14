@@ -224,6 +224,34 @@ export default function gate1(ending) {
       { latitude: 23.34723, longitude: 85.41665 },
       { latitude: 23.347201, longitude: 85.4166 },
     ];
+  } else if (ending === "ADMINISTRATIVE GROUND") {
+    return [
+      { latitude: 23.35577, longitude: 85.41309 },
+      { latitude: 23.35443, longitude: 85.41305 },
+      { latitude: 23.353, longitude: 85.41302 },
+      { latitude: 23.3503, longitude: 85.413 },
+      { latitude: 23.3501, longitude: 85.4131 },
+      { latitude: 23.3501, longitude: 85.4132 },
+      { latitude: 23.3501, longitude: 85.4133 },
+      { latitude: 23.3501, longitude: 85.41356 },
+      { latitude: 23.35018, longitude: 85.41442 },
+      { latitude: 23.34994, longitude: 85.41463 },
+      { latitude: 23.34936, longitude: 85.41495 },
+      { latitude: 23.3493, longitude: 85.415 },
+      { latitude: 23.3485, longitude: 85.41565 },
+      { latitude: 23.348, longitude: 85.41595 },
+      { latitude: 23.34768, longitude: 85.416 },
+      { latitude: 23.3472, longitude: 85.41605 },
+      { latitude: 23.347, longitude: 85.41612 },
+      { latitude: 23.34685, longitude: 85.41622 },
+      { latitude: 23.3467, longitude: 85.41636 },
+      { latitude: 23.3467, longitude: 85.41643 },
+      { latitude: 23.34706, longitude: 85.41676 },
+      { latitude: 23.3471, longitude: 85.4167 },
+      { latitude: 23.34714, longitude: 85.4167 },
+      { latitude: 23.34723, longitude: 85.41665 },
+      { latitude: 23.34735, longitude: 85.41683 },
+    ];
   } else {
     return [];
   }

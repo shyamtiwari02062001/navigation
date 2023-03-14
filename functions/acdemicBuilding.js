@@ -435,6 +435,11 @@ export default function academicBuilding(ending) {
       { latitude: 23.34723, longitude: 85.41665 },
       { latitude: 23.347201, longitude: 85.4166 },
     ];
+  } else if (ending === "ADMINISTRATIVE GROUND") {
+    return [
+      { latitude: 23.347201, longitude: 85.4166 },
+      { latitude: 23.34735, longitude: 85.41683 },
+    ];
   } else {
     return [];
   }
