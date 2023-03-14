@@ -164,7 +164,7 @@ export default function gate1(ending) {
       { latitude: 23.34867, longitude: 85.4139 },
       { latitude: 23.34872, longitude: 85.41387 },
     ];
-  } else if (ending === "GIRLS HOLSTEL") {
+  } else if (ending === "GIRLS HOSTEL") {
     return [
       { latitude: 23.35577, longitude: 85.41309 },
       { latitude: 23.35443, longitude: 85.41305 },
