@@ -440,6 +440,14 @@ export default function academicBuilding(ending) {
       { latitude: 23.347201, longitude: 85.4166 },
       { latitude: 23.34735, longitude: 85.41683 },
     ];
+  }else if (ending === "ADMINISTRATIVE BUILDING") {
+    return [
+      { latitude: 23.347201, longitude: 85.4166 },
+      { latitude: 23.3473, longitude: 85.41674 },
+      { latitude: 23.3472, longitude: 85.41683 },
+      { latitude: 23.34713, longitude: 85.41699 },
+      { latitude: 23.34714, longitude: 85.41715 },
+    ];
   } else {
     return [];
   }
